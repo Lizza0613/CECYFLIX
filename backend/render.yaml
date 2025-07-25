@@ -1,0 +1,14 @@
+services:
+- type: web
+name: recomendaciones-backend
+env: node
+plan: free
+region: oregon
+buildCommand: npm install
+startCommand: node index.js
+rootDir: backend
+envVars:
+- key: MONGO_URI
+value: mongodb+srv://contrerasbeth:Mongo0613@cineversecluster.0yti1ui.mongodb.net/?retryWrites=true&w=majority&appName=cineverseCluster
+ - key: OPENROUTER_API_KEY
+ value: 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
