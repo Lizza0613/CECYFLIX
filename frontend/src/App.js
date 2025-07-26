@@ -9,7 +9,7 @@ function App() {
   const [modoDescripcion, setModoDescripcion] = useState(false);
 
   useEffect(() => {
-    fetch('/api/peliculas')
+    fetch('https://cecyflix-1-y6a5.onrender.com')
       .then(res => res.json())
       .then(data => {
         setPeliculas(data);
@@ -32,7 +32,7 @@ function App() {
 
   const handleBuscarPorDescripcion = async () => {
     try {
-      const res = await fetch('/api/recomendaciones', {
+      const res = await fetch('https://cecyflix-1-y6a5.onrender.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
